@@ -3,6 +3,7 @@ import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 function Weather() {
   const [ready, setReady] = useState(false);
@@ -66,10 +67,8 @@ function Weather() {
               alt={weatherData.description}
               className="float-left"
             />
-            <span className="temperature">
-              {Math.round(weatherData.temperature)}
-            </span>
-            <span className="unit">°C</span>
+            <WeatherTemperature celsius={weatherData.temperature}/>
+            
           </div>
           <div className="col-6">
             <ul>
