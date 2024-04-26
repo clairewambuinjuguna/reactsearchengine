@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 function Weather() {
   const [ready, setReady] = useState(false);
@@ -68,6 +69,7 @@ function Weather() {
               className="float-left"
             />
             <WeatherTemperature celsius={weatherData.temperature}/>
+            <WeatherForecast/>
             
           </div>
           <div className="col-6">

@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Weather from "./Weather";
 
@@ -10,12 +9,23 @@ function App() {
         <footer>
           <p>
             This project was coded by{" "}
-            <a href="/" target="_blank">
+            <a href="https://github.com/clairewambuinjuguna" target="_blank">
               Claire Njuguna
             </a>{" "}
             and is open-sourced on{" "}
-            <a href="/" target="_blank">
+            <a
+              href="https://github.com/clairewambuinjuguna/reactsearchengine"
+              target="_blank"
+            >
               gitHub
+            </a>{" "}
+            
+            and {""}
+            <a
+              href="https://weatherappbuiltwithreact.netlify.app/"
+              target="_blank"
+            >
+              hosted on netlify
             </a>
           </p>
         </footer>
