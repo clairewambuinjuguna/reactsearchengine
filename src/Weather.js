@@ -14,6 +14,7 @@ function Weather() {
   function handleResponse(response) {
     setWeatherData({
       temperature: response.data.main.temp,
+      coordinates:response.data.coord,
       city: response.data.name,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -28,7 +29,7 @@ function Weather() {
   function handleSubmit(event) {
     event.preventDefault();
     if (city.trim() !== "") {
-      let apiKey = "047e82a3493503fd3349718fd1e42b74";
+      let apiKey = "6bfa54f242cbb59343d4e58db578dc61";
       let apiURL = `https://api.openweathermap.org/data/2.5/weather?&units=metric&q=${city}&appid=${apiKey}`;
       axios.get(apiURL).then(handleResponse);
     }
@@ -69,7 +70,7 @@ function Weather() {
               className="float-left"
             />
             <WeatherTemperature celsius={weatherData.temperature}/>
-            <WeatherForecast/>
+            <WeatherForecast coordinates={weatherData.coordinates}/>
             
           </div>
           <div className="col-6">
