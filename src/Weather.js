@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState  } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -37,9 +37,7 @@ function Weather() {
 
   if (ready) {
     return (
-      
       <div className="Weather">
-       
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col">
@@ -59,7 +57,9 @@ function Weather() {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li><FormattedDate date={weatherData.date}/></li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
@@ -69,9 +69,7 @@ function Weather() {
               alt={weatherData.description}
               className="float-left"
             />
-            <WeatherTemperature celsius={weatherData.temperature}/>
-            <WeatherForecast coordinates={weatherData.coordinates}/>
-            
+            <WeatherTemperature celsius={weatherData.temperature} />
           </div>
           <div className="col-6">
             <ul>
@@ -79,6 +77,7 @@ function Weather() {
               <li>Wind:{weatherData.wind} km/hr</li>
             </ul>
           </div>
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
