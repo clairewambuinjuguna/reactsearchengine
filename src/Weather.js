@@ -51,14 +51,19 @@ function Weather() {
               />
             </div>
             <div className="col-auto">
-              <input type="submit" value="Search" className="btn btn-primary" />
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-primary "
+                style={{ backgroundColor: "#30475E", borderColor: "#30475E" }}
+              />
             </div>
           </div>
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
           <li>
-            <FormattedDate date={weatherData.date} />
+            <FormattedDate date={weatherData.date} />{""}
           </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>

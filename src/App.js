@@ -9,21 +9,20 @@ function App() {
         <footer>
           <p>
             This project was coded by{" "}
-            <a href="https://github.com/clairewambuinjuguna" target="_blank">
+            <a href="https://github.com/clairewambuinjuguna" target="_blank" rel="noreferrer">
               Claire Njuguna
             </a>{" "}
             and is open-sourced on{" "}
             <a
               href="https://github.com/clairewambuinjuguna/reactsearchengine"
-              target="_blank"
-            >
+              target="_blank" rel="noreferrer" >
               gitHub
             </a>{" "}
             
             and {""}
             <a
               href="https://weatherappbuiltwithreact.netlify.app/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               hosted on netlify
             </a>
